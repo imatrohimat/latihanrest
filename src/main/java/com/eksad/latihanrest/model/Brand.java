@@ -9,27 +9,27 @@ import javax.persistence.Table;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.ToString;
 
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
+@Getter
+@Setter
 @Entity
-@Table(name = "Brand")
+@Table(name = "brand")
 
 public class Brand extends BaseEntity {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY) // autoincrement
-	private long id;
+//	@Id
+//	@GeneratedValue(strategy = GenerationType.IDENTITY) // autoincrement
+//	private long id;
+//	
 	@Column(nullable = false) // not null
 	private String name;
 
 	@Column(name = "product_type")
 	private String productType;
-
-	public void setName(Brand brand, Object name2) {
-		// TODO Auto-generated method stub
-		
-	}
 
 }

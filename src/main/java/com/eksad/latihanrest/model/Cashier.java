@@ -12,7 +12,7 @@ import lombok.ToString;
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 @Entity
-//@DiscriminatorValue("Cashier")
+@DiscriminatorValue("Cashier")
 
 public class Cashier extends Person{
 	private String shift;
